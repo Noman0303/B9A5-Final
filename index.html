@@ -279,55 +279,32 @@
        <div class="p-2 w-full lg:w-1/4 " >
         <h3 class="font-raleway font-semibold text-2xl border-b-2 border-dashed pb-5 ">Select Your Seat</h3>
         <!-- price-box -->
-        <div class="bg-gray-200 rounded-xl mt-4">
-          <div class="overflow-x-auto ">
-          <table class="table">
-            <!-- head -->
-            <thead>
-              <tr>
-                <th>Seat <span class="bg-green-200" id="selected">0</span></th>
-                <th>Class</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-            <!-- ticket details input -->
-            <div id="ticket" >
-              <tr>
-                <td><span id="seat-number">C2</span></td>
-                <td id="Economy">Economy</td>
-                <td id="value">550</td>
-              </tr>
-              <tr id="">
-                <td><span id="seat-number">C2</span></td>
-                <td id="Economy">Economy</td>
-                <td id="value">550</td>
-              </tr>
-
-            </div>
-            </tbody>
-          </table>
+        <div class="bg-gray-200 rounded-xl mt-4 ">
+          <div class=" flex justify-around p-2 ">
+            <p class="font-bold">Seat<span class="bg-green-200" id="selected"> 0</span></p>
+            <p class="font-bold">Class</p> 
+            <p class="font-bold">Price</p>
           </div>
-          <div>
-            <label class="form-control w-full max-w-xs">
-              <div class="label">
-                <span class="label-text">Total Price</span>
-                <span class="label-text-alt">BDT<span id="Ticket-sum">1000</span></span>
-              </div>
-              <div class="label">
-                <span class="label-text">Discount </span>
-                <span class="label-text-alt">BDT<span id="Ticket-discount">0</span></span>
-              </div>
-              <div class="relative">
-              <input type="text" id="couponInput" placeholder="Have any coupon?" class="w-full  rounded-lg h-8">
-              <button class="absolute inset-y-0 right-0 bg-green-600 text-white font-semibold rounded-lg px-3" onclick="applyCoupon()">Apply</button>
-              </div>
-              <div class="label">
-                <span class="label-text-alt">Grand Total</span>
-                <span class="label-text-alt">BDT <span>0</span></span>
-              </div>
-            </label>
+          <hr>
+          <div id="selected-ticket-container" ></div>
+          <hr>
+          <div class="flex justify-between p-4 ">
+            <p>Total Price</p>
+            <p>BDT<span id="Ticket-sum"> 1000</span></p>
           </div>
+          <div class="flex justify-between p-4 ">
+            <p>Discount</p>
+            <p>BDT<span id="Ticket-sum"> 0</span></p>
+          </div>
+          <div class="flex justify-between p-2 ">
+          <input type="text" id="couponInput" placeholder="Have any coupon?" class="w-full  rounded-lg h-8">
+          <button class=" bg-green-600 text-white font-semibold rounded-lg px-3" onclick="applyCoupon()">Apply</button>
+          </div>
+          <div class="flex justify-between p-4 ">
+            <p>Grand Total</p>
+            <p>BDT<span id="Ticket-sum"> 0</span></p>
+          </div>
+          
         </div>
         <!-- input details -->
         <div class="mt-6">
