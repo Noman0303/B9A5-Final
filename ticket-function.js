@@ -41,6 +41,7 @@ for (const btn of allbtn) {
         selectedContainer.appendChild(div);
 
         updateTotalCost(price);
+        grandTotalValue();
     })
 }
 
@@ -49,9 +50,9 @@ function updateTotalCost(price){
     const totalCost= getConvertedValue("Ticket-sum")
     const sum = totalCost + price
     document.getElementById("Ticket-sum").innerText = sum;
+    grandTotalValue();
 
 }
-
 
 
 // coupon apply
@@ -83,3 +84,18 @@ function applyCoupon() {
         const discountamount=discountedvalue*0.20;
         document.getElementById("Ticket-discount").innerText = discountamount.toFixed(2);
   }
+
+  function grandTotalValue() {
+    const totalCost = getConvertedValue("Ticket-sum");
+    const couponCode = document.getElementById("couponInput").value;
+    let discountAmount = 0;
+    
+    if (couponCode === "NEW15") {
+        discountAmount = totalCost * 0.15;
+    } else if (couponCode === "Couple 20") {
+        discountAmount = totalCost * 0.20;
+    }
+
+    const grandTotal = totalCost - discountAmount;
+    document.getElementById("grand-total").innerText = grandTotal.toFixed(2);
+}
