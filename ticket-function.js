@@ -6,8 +6,8 @@ function getConvertedValue(id){
 }
 
 
-const available = getConvertedValue("available")
-const selected = getConvertedValue("selected")
+// const available = getConvertedValue("available")
+// const selected = getConvertedValue("selected")
 
 
 const allbtn=document.getElementsByClassName("btn-selected")
@@ -15,10 +15,10 @@ console.log(allbtn);
 
 for (const btn of allbtn) {
     btn.addEventListener("click",function(event){
-        const button = event.target.innerText
+        const button = event.target.innerText;
         console.log(button);
         const className = "Economy";
-        const price = "550";
+        const price = 500;
 
         console.log ( button, className, price);
 
@@ -40,10 +40,17 @@ for (const btn of allbtn) {
         div.appendChild(p3);
         selectedContainer.appendChild(div);
 
+        updateTotalCost(price);
     })
 }
 
+function updateTotalCost(price){
+    // console.log(price);
+    const totalCost= getConvertedValue("Ticket-sum")
+    const sum = totalCost + price
+    document.getElementById("Ticket-sum").innerText = sum;
 
+}
 
 
 
